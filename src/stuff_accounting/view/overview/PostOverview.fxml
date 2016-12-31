@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="244.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stuff_accounting.controller.ui_controllers.overview.PostOverviewController">
+   <children>
+      <Label layoutX="45.0" layoutY="112.0" text="post name" />
+      <Label layoutX="57.0" layoutY="145.0" text="salary" />
+      <TextField fx:id="postName" layoutX="114.0" layoutY="108.0" prefHeight="25.0" prefWidth="113.0" />
+      <TextField fx:id="salaryFrom" layoutX="48.0" layoutY="168.0" prefHeight="25.0" prefWidth="50.0" promptText="from" />
+      <Label layoutX="100.0" layoutY="172.0" text="-" />
+      <TextField fx:id="salaryTo" layoutX="106.0" layoutY="168.0" prefHeight="25.0" prefWidth="50.0" promptText="to" />
+      <Label layoutX="156.0" layoutY="172.0" text="uah" />
+   </children>
+</AnchorPane>

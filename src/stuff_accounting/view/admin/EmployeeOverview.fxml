@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pickOnBounds="false" prefHeight="500.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stuff_accounting.controller.ui_controllers.overview.EmployeeOverviewController">
+    <left>
+        <ScrollPane prefHeight="599.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="495.0" prefWidth="194.0">
+                    <children>
+                        <Text layoutX="15.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+                        <Text layoutX="16.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Education type" AnchorPane.leftAnchor="16.0" />
+                  <ChoiceBox fx:id="educationType" layoutX="16.0" layoutY="81.0" prefHeight="25.0" prefWidth="168.0" AnchorPane.leftAnchor="16.0" />
+                  <Button fx:id="filter" layoutX="56.0" layoutY="423.0" mnemonicParsing="false" onAction="#onFilter" prefHeight="25.0" prefWidth="90.0" text="Filter" />
+                  <VBox fillWidth="false" layoutX="16.0" layoutY="341.0" prefHeight="22.0" prefWidth="72.0" spacing="5.0" />
+                  <TextField fx:id="employeeName" layoutX="20.0" layoutY="31.0" />
+                  <Button fx:id="department" layoutX="14.0" layoutY="195.0" mnemonicParsing="false" onAction="#onDepartmentChoose" text="Department" />
+                  <Label layoutX="94.0" layoutY="199.0" text="Click to choose" />
+                  <TextField fx:id="country" layoutX="14.0" layoutY="141.0" />
+                  <Label layoutX="18.0" layoutY="116.0" text="Country" />
+                  <AnchorPane layoutX="40.0" layoutY="296.0" prefHeight="90.0" prefWidth="146.0">
+                     <children>
+                        <CheckBox fx:id="fitness" disable="true" layoutX="7.0" layoutY="18.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="111.0" text="military fitness" />
+                        <CheckBox fx:id="married" disable="true" layoutX="7.0" layoutY="49.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="111.0" text="married" />
+                     </children>
+                  </AnchorPane>
+                  <CheckBox fx:id="optional" layoutX="20.0" layoutY="279.0" mnemonicParsing="false" onAction="#onSelectOptional" text="optional" />
+                  <Label fx:id="selectedDepartment" layoutX="17.0" layoutY="231.0" prefHeight="22.0" prefWidth="149.0" visible="false" />
+                    </children>
+                </AnchorPane>
+            </content>
+        </ScrollPane>
+    </left>
+   <center>
+      <AnchorPane prefHeight="494.0" prefWidth="310.0">
+         <children>
+            <TableView fx:id="employeeTableView" layoutX="9.0" prefHeight="465.0" prefWidth="315.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="idColumn" minWidth="0.0" prefWidth="82.0" text="ID" />
+                <TableColumn fx:id="nameColumn" prefWidth="219.0" text="Name" />
+              </columns>
+            </TableView>
+            <Button fx:id="deleteEmployee" layoutX="94.0" layoutY="463.0" mnemonicParsing="false" onAction="#onDeleteEmployee" prefHeight="25.0" prefWidth="147.0" text="Delete" />
+            <Button fx:id="chooseEmployees" layoutX="92.0" layoutY="463.0" mnemonicParsing="false" onAction="#onChooseEmployees" prefHeight="25.0" prefWidth="150.0" text="choose" />
+         </children>
+      </AnchorPane>
+   </center>
+   <right>
+      <Pane prefHeight="500.0" prefWidth="293.0" BorderPane.alignment="CENTER">
+         <children>
+            <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="8.0" prefHeight="495.0" prefViewportHeight="15.0" prefViewportWidth="35.07080078125" prefWidth="281.0">
+               <padding>
+                  <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+               </padding>
+               <content>
+                  <Label fx:id="detailsLabel" onMouseClicked="#onUpdateEmployee" text="Label" wrapText="true" />
+               </content>
+            </ScrollPane>
+         </children>
+      </Pane>
+   </right>
+</BorderPane>

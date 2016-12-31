@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+
+<AnchorPane prefHeight="544.0" prefWidth="563.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stuff_accounting.controller.ui_controllers.overview.EntityOverviewController">
+   <children>
+      <TableView fx:id="componentTableView" layoutX="26.0" layoutY="27.0" prefHeight="451.0" prefWidth="287.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="43.0" text="id" />
+          <TableColumn fx:id="nameColumn" prefWidth="242.0" text="name" />
+        </columns>
+      </TableView>
+      <Button layoutX="26.0" layoutY="505.0" mnemonicParsing="false" onAction="#refreshOnFilters" text="Refresh" />
+      <Label fx:id="detailsLabel" alignment="TOP_LEFT" layoutX="325.0" layoutY="27.0" pickOnBounds="false" prefHeight="374.0" prefWidth="223.0" text="Label" wrapText="true" />
+      <Button fx:id="chooseButton" layoutX="251.0" layoutY="505.0" mnemonicParsing="false" onAction="#chooseButtonHandler" text="Choose" />
+      <Button fx:id="deleteButton" layoutX="254.0" layoutY="505.0" mnemonicParsing="false" onAction="#deleteButtonHandler" text="Delete" visible="false" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="285.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stuff_accounting.controller.ui_controllers.overview.SubdivisionOverviewController">
+   <children>
+      <Label layoutX="26.0" layoutY="117.0" text="subdivision name" />
+      <Label layoutX="14.0" layoutY="154.0" text="departments number" />
+      <TextField fx:id="subdivisionName" layoutX="131.0" layoutY="113.0" />
+      <TextField fx:id="departmentsNumber" layoutX="131.0" layoutY="150.0" />
+   </children>
+</AnchorPane>
